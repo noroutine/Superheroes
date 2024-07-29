@@ -34,7 +34,7 @@ val baseline = Typography()
 
 val Typography = Typography(
     bodyLarge = TextStyle(
-        fontFamily = displayFontFamily,
+        fontFamily = bodyFontFamily,
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp,
         lineHeight = 24.sp,

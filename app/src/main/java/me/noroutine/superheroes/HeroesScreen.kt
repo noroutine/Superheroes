@@ -3,9 +3,11 @@ package me.noroutine.superheroes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -41,7 +43,6 @@ fun HeroCard(hero: Hero, modifier: Modifier = Modifier) {
             Column(
                 modifier = Modifier
                     .weight(1f)
-                    .padding(end = dimensionResource(id = R.dimen.card_padding))
             ) {
                 Text(
                     text = stringResource(id = hero.nameRes),
@@ -52,6 +53,7 @@ fun HeroCard(hero: Hero, modifier: Modifier = Modifier) {
                     style = MaterialTheme.typography.bodyLarge
                 )
             }
+            Spacer(modifier = Modifier.width(dimensionResource(id = R.dimen.card_padding)))
             HeroImage(imageResource = hero.imageRes, modifier = Modifier.weight(1f))
         }
     }
